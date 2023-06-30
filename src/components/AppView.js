@@ -1,7 +1,9 @@
+import ChatContainer from "./chat/ChatContainer";
+
 const AppView = (props) => {
     return (
         <div id="content">
-            {props.children}
+            <ChatContainer />
         </div>
     )
 }
