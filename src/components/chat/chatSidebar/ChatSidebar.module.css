@@ -1,0 +1,36 @@
+#sidebar {
+    align-items: center;
+    background-color: #494D73;
+    padding: 1rem;
+    width: 20%;
+}
+
+#sidebarHead {
+    display: flex;
+    justify-content: space-between;
+}
+
+#sidebarHeadNew {
+    width: 100%;
+}
+
+#sidebarHeadClose {
+    margin-left: 10px;
+}
+
+#sidebarHead div {
+    border: solid 1px #fff;
+    border-radius: 5px;
+    color: #fff;
+    padding: 5px;
+}
+
+#sidebarHead div:hover {
+    cursor: pointer;
+    background: rgba(255, 255, 255, 0.1)
+}
+
+#sidebarHead div:active {
+    background-color: #fff;
+    color: #494D73;
+}
