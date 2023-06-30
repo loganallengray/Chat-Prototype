@@ -1,0 +1,37 @@
+#messageBar {
+    align-items: center;
+    background-color: #3d456f;
+    display: flex;
+    justify-content: center;
+    padding: 1rem;
+}
+
+#messageBar input {
+    padding: 5px;
+    width: 80%;
+}
+
+#messageBar button {
+    margin-left: 10px;
+    padding: 5px 10px;
+}
+
+#messageBar input,
+#messageBar button {
+    background-color: #2F3555;
+    border: 1px solid transparent;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 1rem;
+}
+
+#messageBar input:hover,
+#messageBar input:active,
+#messageBar button:hover {
+    border: 1px solid #fff;
+}
+
+#messageBar button:active {
+    background-color: #fff;
+    color: #2F3555;
+}
