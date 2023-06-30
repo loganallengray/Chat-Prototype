@@ -1,8 +1,11 @@
+import styles from './AppView.module.css';
 import ChatContainer from "./chat/ChatContainer";
+import ChatSidebar from './chat/chatSidebar/ChatSidebar';
 
-const AppView = (props) => {
+const AppView = () => {
     return (
-        <div id="content">
+        <div id={styles.content}>
+            <ChatSidebar />
             <ChatContainer />
         </div>
     )
