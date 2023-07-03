@@ -1,6 +1,7 @@
 #sidebar {
     align-items: center;
     background-color: #494D73;
+    overflow-y: scroll;
     padding: 1rem;
     width: 20%;
 }
@@ -19,7 +20,7 @@
 }
 
 #sidebarHead div {
-    border: solid 1px #fff;
+    border: solid 1px #8697DD;
     border-radius: 5px;
     color: #fff;
     padding: 5px;
@@ -27,7 +28,8 @@
 
 #sidebarHead div:hover {
     cursor: pointer;
-    background: rgba(255, 255, 255, 0.1)
+    background: rgba(255, 255, 255, 0.1);
+    border: solid 1px #fff;
 }
 
 #sidebarHead div:active {
