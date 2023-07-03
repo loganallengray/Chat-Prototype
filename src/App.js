@@ -7,7 +7,7 @@ function App() {
   return (
     <div id="app">
       <Header />
-      <ChatContext.Provider value={[]}>
+      <ChatContext.Provider value={[{ id: 1, text: "test" }]}>
         <AppView />
       </ChatContext.Provider>
     </div>

@@ -5,3 +5,5 @@ const ChatContext = React.createContext();
 // Chatcontext = array of chat objects
 // Chatobject = (id, name, messages)
 // Message = (id, content, userSent)
+
+export default ChatContext;
