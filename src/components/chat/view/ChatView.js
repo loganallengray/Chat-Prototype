@@ -6,6 +6,7 @@ import UserMessage from './messageStyles/UserMessage';
 const ChatView = () => {
     const cxt = useContext(ChatContext);
 
+    // if (cxt.chats[cxt.currentChat] !== undefined) {
     return (
         <ul id={styles.chat}>
             {cxt.chats[cxt.currentChat].messages.map(message => (
@@ -13,6 +14,7 @@ const ChatView = () => {
             ))}
         </ul>
     )
+    // }
 }
 
 export default ChatView;

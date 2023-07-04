@@ -9,7 +9,7 @@ const ChatList = () => {
         const [, chatIdStr] = event.target.id.split("--");
         const chatId = Number(chatIdStr);
 
-        cxt.setCurrentChat(chatId);
+        cxt.setCurrentChat(chatId - 1);
     }
 
     return (
