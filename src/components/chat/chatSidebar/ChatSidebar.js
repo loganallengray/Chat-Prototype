@@ -32,7 +32,7 @@ const ChatSidebar = () => {
         )
     } else {
         return (
-            <div onClick={cxt.toggleShowSideBar}>Open</div>
+            <div id={styles.openSidebar} className={styles.headButton} onClick={cxt.toggleShowSideBar}>Open</div>
         )
     }
 }

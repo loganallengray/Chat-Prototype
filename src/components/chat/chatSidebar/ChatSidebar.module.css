@@ -3,6 +3,7 @@
     background-color: #494D73;
     overflow-y: scroll;
     padding: 1rem;
+    min-width: 170px;
     width: 20%;
 }
 
@@ -17,6 +18,11 @@
 
 #closeSidebar {
     margin-left: 10px;
+}
+
+#openSidebar {
+    margin: 1rem;
+    position: absolute;
 }
 
 .headButton {
