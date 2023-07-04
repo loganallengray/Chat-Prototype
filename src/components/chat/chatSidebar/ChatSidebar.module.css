@@ -11,28 +11,28 @@
     justify-content: space-between;
 }
 
-#sidebarHeadNew {
+#newChat {
     width: 100%;
 }
 
-#sidebarHeadClose {
+#closeSidebar {
     margin-left: 10px;
 }
 
-#sidebarHead div {
+.headButton {
     border: solid 1px #8697DD;
     border-radius: 5px;
     color: #fff;
     padding: 5px;
 }
 
-#sidebarHead div:hover {
+.headButton:hover {
     cursor: pointer;
     background: rgba(255, 255, 255, 0.1);
     border: solid 1px #fff;
 }
 
-#sidebarHead div:active {
+.headButton:active {
     background-color: #fff;
     color: #494D73;
 }
