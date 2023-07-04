@@ -8,7 +8,7 @@ const ChatSidebar = () => {
 
     const newChatHandler = (event) => {
         const newChats = [...cxt.chats];
-        let currentId = cxt.currentId;
+        let currentId = cxt.currentChatId;
 
         newChats.push({
             id: currentId,
@@ -17,7 +17,7 @@ const ChatSidebar = () => {
         })
 
         cxt.setChats(newChats);
-        cxt.setCurrentId(currentId + 1);
+        cxt.setCurrentChatId(currentId + 1);
     }
 
     return (

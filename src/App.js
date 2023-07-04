@@ -5,9 +5,10 @@ import './App.css';
 import { useState } from "react";
 
 function App() {
-  const [chats, setChats] = useState([]);
+  const [chats, setChats] = useState([{ id: 0, name: "default", messages: [] }]);
   const [currentChat, setCurrentChat] = useState(0);
-  const [currentId, setCurrentId] = useState(1);
+  const [currentChatId, setCurrentChatId] = useState(1);
+  const [currentMessageId, setCurrentMessageId] = useState(1);
 
   return (
     <div id="app">
@@ -16,8 +17,10 @@ function App() {
         {
           currentChat: currentChat,
           setCurrentChat: setCurrentChat,
-          currentId: currentId,
-          setCurrentId: setCurrentId,
+          currentChatId: currentChatId,
+          setChatCurrentId: setCurrentChatId,
+          currentMessageId: currentMessageId,
+          setCurrentMessageId: setCurrentMessageId,
           chats: chats,
           setChats: setChats
         }

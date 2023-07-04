@@ -7,6 +7,9 @@ const ChatView = () => {
 
     return (
         <ul id={styles.chat}>
+            {cxt.chats[0].messages.map(message => (
+                <li key={message.id}>{message.content}</li>
+            ))}
         </ul>
     )
 }
