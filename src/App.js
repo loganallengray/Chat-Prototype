@@ -18,7 +18,7 @@ function App() {
           currentChat: currentChat,
           setCurrentChat: setCurrentChat,
           currentChatId: currentChatId,
-          setChatCurrentId: setCurrentChatId,
+          setCurrentChatId: setCurrentChatId,
           currentMessageId: currentMessageId,
           setCurrentMessageId: setCurrentMessageId,
           chats: chats,

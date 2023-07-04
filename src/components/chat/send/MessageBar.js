@@ -21,6 +21,7 @@ const MessageBar = () => {
             content: message,
             userSent: true
         });
+
         cxt.setChats(newChats);
         cxt.setCurrentMessageId(currentId + 1);
         setMessage("");
