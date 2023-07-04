@@ -8,7 +8,7 @@ const ChatView = () => {
 
     return (
         <ul id={styles.chat}>
-            {cxt.chats[0].messages.map(message => (
+            {cxt.chats[cxt.currentChat].messages.map(message => (
                 <UserMessage key={message.id} message={message} />
             ))}
         </ul>

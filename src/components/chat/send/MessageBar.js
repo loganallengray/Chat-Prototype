@@ -16,7 +16,7 @@ const MessageBar = () => {
         const newChats = [...cxt.chats]
         const currentId = cxt.currentMessageId;
 
-        newChats[0].messages.push({
+        newChats[cxt.currentChat].messages.push({
             id: currentId,
             content: message,
             userSent: true

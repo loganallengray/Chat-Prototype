@@ -5,7 +5,7 @@ import './App.css';
 import { useState } from "react";
 
 function App() {
-  const [chats, setChats] = useState([{ id: 0, name: "default", messages: [] }]);
+  const [chats, setChats] = useState([{ id: 0, name: "default", messages: [{ id: 1, content: "test", userSent: true }] }]);
   const [currentChat, setCurrentChat] = useState(0);
   const [currentChatId, setCurrentChatId] = useState(1);
   const [currentMessageId, setCurrentMessageId] = useState(1);
