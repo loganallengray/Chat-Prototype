@@ -9,7 +9,7 @@ const ChatList = () => {
         const [, chatIdStr] = event.target.id.split("--");
         const chatId = Number(chatIdStr);
 
-        cxt.setCurrentChat(chatId);
+        cxt.setCurrentChat(chatId - 1);
     }
 
     return (
@@ -18,7 +18,7 @@ const ChatList = () => {
                 <li
                     id={`chat--${chat.id}`}
                     key={chat.id}
-                    className={chat.id === cxt.currentChat ? `${styles.chatButton} ${styles.selected}` : styles.chatButton}
+                    className={chat.id - 1 === cxt.currentChat ? `${styles.chatButton} ${styles.selected}` : styles.chatButton}
                     onClick={switchChatHandler}
                 >{chat.name}</li>
             ))}
