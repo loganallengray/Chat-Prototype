@@ -2,6 +2,7 @@ import { useContext } from 'react';
 import styles from './ChatView.module.css';
 import ChatContext from '../../../context/chat-context';
 import UserMessage from './messageStyles/UserMessage';
+import AIMessage from './messageStyles/AIMessage';
 
 const ChatView = () => {
     const cxt = useContext(ChatContext);
@@ -10,7 +11,9 @@ const ChatView = () => {
     return (
         <ul id={styles.chat}>
             {cxt.chats[cxt.currentChat].messages.map(message => (
-                <UserMessage key={message.id} message={message} />
+                message.userSent
+                    ? <UserMessage key={message.id} message={message} />
+                    : <AIMessage key={message.id} message={message} />
             ))}
         </ul>
     )

@@ -18,7 +18,7 @@ const ChatList = () => {
                 <li
                     id={`chat--${chat.id}`}
                     key={chat.id}
-                    className={chat.id === cxt.currentChat ? `${styles.chatButton} ${styles.selected}` : styles.chatButton}
+                    className={chat.id - 1 === cxt.currentChat ? `${styles.chatButton} ${styles.selected}` : styles.chatButton}
                     onClick={switchChatHandler}
                 >{chat.name}</li>
             ))}

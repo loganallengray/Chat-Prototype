@@ -23,7 +23,7 @@ const MessageBar = () => {
         });
 
         // cxt.setChats(newChats);
-        cxt.setCurrentMessageId(currentId + 1);
+        // cxt.setCurrentMessageId(currentId + 1);
         setMessage("");
 
         // For receiving a "AI message"
@@ -41,14 +41,15 @@ const MessageBar = () => {
             "My responses are generated based on patterns and information I've learned from a wide range of sources."
         ]
 
-        const chosenResponse = responses[Math.floor(Math.random() * responses.length - 1)];
+        const chosenResponse = responses[Math.floor(Math.random() * responses.length)];
 
         newChats[cxt.currentChat].messages.push({
-            id: currentId,
+            id: currentId + 1,
             content: chosenResponse,
             userSent: false
         })
 
+        cxt.setCurrentMessageId(currentId + 2);
         cxt.setChats(newChats);
     }
 
