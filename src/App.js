@@ -13,6 +13,8 @@ function App() {
   const [currentMessageId, setCurrentMessageId] = useState(1);
   const [showModal, setShowModal] = useState(false);
   const [modal, setModal] = useState({
+    name: "",
+    type: "",
     title: "",
     message: "",
   });
