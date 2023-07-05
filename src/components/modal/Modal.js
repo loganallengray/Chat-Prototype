@@ -7,7 +7,7 @@ const Modal = ({ setShowModal, modal }) => {
         switch (modal.name) {
             case "feedback":
                 return (
-                    <FeedbackModal modal={modal} />
+                    <FeedbackModal setShowModal={setShowModal} modal={modal} />
                 )
             default:
                 return (

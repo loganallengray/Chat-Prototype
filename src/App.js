@@ -18,6 +18,8 @@ function App() {
     title: "",
     message: "",
   });
+  const [feedback, setFeedback] = useState([]);
+  // {positive: boolean, messageId: num, content: ""}
 
   const toggleShowSideBar = (event) => {
     setShowSidebar((prevState) => !prevState);
@@ -41,6 +43,8 @@ function App() {
           modal,
           setShowModal,
           setModal,
+          feedback,
+          setFeedback
         }
       }>
         <AppView />

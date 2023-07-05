@@ -13,14 +13,16 @@ const AIMessage = ({ message }) => {
                 name: "feedback",
                 type: "positive",
                 title: "Positive Feedback",
-                message: "Please tell us what you liked about this message so we can work to improve the responses you receive!"
+                message: "Please tell us what you liked about this message so we can work to improve the responses you receive!",
+                extra: Number(id)
             })
         } else {
             cxt.setModal({
                 name: "feedback",
                 type: "negative",
                 title: "Negative Feedback",
-                message: "Please tell us what you didn't like about this message so we can work to improve the responses you receive."
+                message: "Please tell us what you didn't like about this message so we can work to improve the responses you receive.",
+                extra: Number(id)
             })
         }
 
