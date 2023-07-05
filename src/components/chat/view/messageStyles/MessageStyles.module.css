@@ -16,3 +16,29 @@
     width: 100%;
     margin: 1rem;
 }
+
+.feedbackWrapper {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+}
+
+.feedback {
+    background: #2F3555;
+    border: solid 1px transparent;
+    border-radius: 5px;
+    text-align: center;
+    padding: 0.5rem;
+    margin: 0.2rem;
+    min-width: 15px;
+}
+
+.feedback:hover {
+    border: solid 1px #fff;
+    cursor: pointer;
+}
+
+.feedback:active {
+    color: #333;
+    background-color: #fff;
+}
