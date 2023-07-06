@@ -3,7 +3,7 @@
     background-color: #3d456f;
     display: flex;
     justify-content: center;
-    padding: 1rem;
+    padding: 1rem 1rem 1.5rem 1rem;
 }
 
 #messageBar input {
