@@ -16,7 +16,7 @@ const MessageBar = () => {
         const newChats = [...cxt.chats]
         const currentId = cxt.currentMessageId;
 
-        newChats[cxt.currentChat].messages.push({
+        newChats.find(chat => chat.id === cxt.currentChat).messages.push({
             id: currentId,
             content: message,
             userSent: true
@@ -43,7 +43,7 @@ const MessageBar = () => {
 
         const chosenResponse = responses[Math.floor(Math.random() * responses.length)];
 
-        newChats[cxt.currentChat].messages.push({
+        newChats.find(chat => chat.id === cxt.currentChat).messages.push({
             id: currentId + 1,
             content: chosenResponse,
             userSent: false

@@ -1,6 +1,8 @@
 import styles from './Modal.module.css';
 import React from "react";
 import FeedbackModal from './types/FeedbackModal';
+import EditChatModal from './types/EditChatModal';
+import DeleteChatModal from './types/DeleteChatModal';
 
 const Modal = ({ setShowModal, modal }) => {
     const optionsCheck = () => {
@@ -9,6 +11,16 @@ const Modal = ({ setShowModal, modal }) => {
                 return (
                     <FeedbackModal setShowModal={setShowModal} modal={modal} />
                 )
+            case "chat":
+                if (modal.type === "edit") {
+                    return (
+                        <EditChatModal setShowModal={setShowModal} modal={modal} />
+                    )
+                } else {
+                    return (
+                        <DeleteChatModal setShowModal={setShowModal} modal={modal} />
+                    )
+                }
             default:
                 return (
                     <></>

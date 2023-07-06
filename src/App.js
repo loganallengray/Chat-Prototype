@@ -9,7 +9,7 @@ import Modal from "./components/modal/Modal";
 function App() {
   const [showSidebar, setShowSidebar] = useState(true);
   const [chats, setChats] = useState([{ id: 1, name: "Chat #1", messages: [] }]);
-  const [currentChat, setCurrentChat] = useState(0);
+  const [currentChat, setCurrentChat] = useState(1);
   const [currentChatId, setCurrentChatId] = useState(2);
   const [currentMessageId, setCurrentMessageId] = useState(1);
   const [showModal, setShowModal] = useState(false);
