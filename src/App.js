@@ -1,6 +1,7 @@
+import './scrollbar.css';
 import AppView from "./components/AppView";
 import Header from "./components/header/Header";
-import ChatContext from "./context/chat-context"
+import ChatContext from "./context/chat-context";
 import './App.css';
 import { useState } from "react";
 import Modal from "./components/modal/Modal";
