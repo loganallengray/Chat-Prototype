@@ -76,3 +76,8 @@
     color: #333;
     background-color: #fff;
 }
+
+.errorContainer {
+    display: flex;
+    justify-content: center;
+}

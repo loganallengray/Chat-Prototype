@@ -16,7 +16,7 @@ const EditChatModal = ({ setShowModal, modal }) => {
         setName(event.target.value);
     }
 
-    const feedbackSubmitHandler = (event) => {
+    const editSubmitHandler = (event) => {
         event.preventDefault();
 
         editChats.find(chat => chat.id === modal.extra).name = name;
@@ -27,7 +27,7 @@ const EditChatModal = ({ setShowModal, modal }) => {
     }
 
     return (
-        <form onSubmit={feedbackSubmitHandler}>
+        <form onSubmit={editSubmitHandler}>
             <input
                 autoFocus
                 className={styles.modalInput}
