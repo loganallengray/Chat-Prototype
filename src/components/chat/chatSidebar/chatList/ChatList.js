@@ -16,18 +16,36 @@ const ChatList = () => {
             case "edit":
                 const editChats = [...cxt.chats];
 
-                editChats.find(chat => chat.id === chatId).name = "test";
-                cxt.setChats(editChats);
+                // editChats.find(chat => chat.id === chatId).name = "test";
+                // cxt.setChats(editChats);
+
+                cxt.setModal({
+                    name: "chat",
+                    type: "edit",
+                    title: "Edit Chat Name",
+                    message: "Enter what you would like to rename the chat to in the space below.",
+                    extra: chatId
+                })
+                cxt.setShowModal(true);
                 break;
             case "delete":
                 const deleteChats = [...cxt.chats];
 
-                const filteredChats = deleteChats.filter(chat => chat.id !== chatId);
-                cxt.setCurrentChat(-1)
-                cxt.setChats(filteredChats);
+                // const filteredChats = deleteChats.filter(chat => chat.id !== chatId);
+                // cxt.setCurrentChat(-1)
+                // cxt.setChats(filteredChats);
+
+                cxt.setModal({
+                    name: "chat",
+                    type: "delete",
+                    title: "Delete Chat",
+                    message: "Are you sure you want to delete the chat?",
+                    extra: chatId
+                })
+                cxt.setShowModal(true);
                 break;
             default:
-                break;
+                return;
         }
     }
 
