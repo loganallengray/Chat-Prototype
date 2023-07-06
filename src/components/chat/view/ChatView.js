@@ -7,17 +7,23 @@ import AIMessage from './messageStyles/AIMessage';
 const ChatView = () => {
     const cxt = useContext(ChatContext);
 
-    // if (cxt.chats[cxt.currentChat] !== undefined) {
-    return (
-        <ul id={styles.chat}>
-            {cxt.chats[cxt.currentChat].messages.map(message => (
-                message.userSent
-                    ? <UserMessage key={message.id} message={message} />
-                    : <AIMessage key={message.id} message={message} />
-            ))}
-        </ul>
-    )
-    // }
+    const chat = cxt.chats.find(chat => chat.id === cxt.currentChat);
+
+    if (chat !== undefined) {
+        return (
+            <ul id={styles.chat}>
+                {chat.messages.map(message => (
+                    message.userSent
+                        ? <UserMessage key={message.id} message={message} />
+                        : <AIMessage key={message.id} message={message} />
+                ))}
+            </ul>
+        )
+    } else {
+        return (
+            <ul id={styles.chat}></ul>
+        )
+    }
 }
 
 export default ChatView;
