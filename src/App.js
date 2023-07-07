@@ -29,7 +29,6 @@ function App() {
 
   return (
     <div id="app">
-      <Header />
       <ChatContext.Provider value={
         {
           showSidebar,
@@ -49,6 +48,7 @@ function App() {
           setFeedback
         }
       }>
+        <Header />
         <AppView />
         {showModal ? <Modal setShowModal={setShowModal} modal={modal} /> : ""}
       </ChatContext.Provider>

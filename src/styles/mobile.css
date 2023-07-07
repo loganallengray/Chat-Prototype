@@ -3,16 +3,14 @@
         width: 100% !important;
     }
 
-    .mobile-chatContainer {
+    .mobile-hideChatContainer,
+    .mobile-hideHeaderItem,
+    .mobile-hideSidebarButton {
         display: none !important;
     }
 
     .mobile-header {
         align-items: center !important;
         justify-content: center !important;
-    }
-
-    .mobile-hideHeaderItem {
-        display: none;
     }
 }

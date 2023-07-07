@@ -8,7 +8,7 @@ const ChatContainer = () => {
     const cxt = useContext(ChatContext);
 
     return (
-        <div id={styles.chatContainer} className={cxt.showSidebar ? "mobile-chatContainer" : ""}>
+        <div id={styles.chatContainer} className={cxt.showSidebar ? "mobile-hideChatContainer" : ""}>
             <ChatView />
             <MessageBar />
         </div>);
