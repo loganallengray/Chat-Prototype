@@ -1,4 +1,5 @@
-import './scrollbar.css';
+import './styles/mobile.css';
+import './styles/scrollbar.css';
 import AppView from "./components/AppView";
 import Header from "./components/header/Header";
 import ChatContext from "./context/chat-context";
@@ -8,6 +9,7 @@ import Modal from "./components/modal/Modal";
 
 function App() {
   const [showSidebar, setShowSidebar] = useState(true);
+  const [showTabView, setShowTabView] = useState(false);
   const [chats, setChats] = useState([{ id: 1, name: "Chat #1", messages: [] }]);
   const [currentChat, setCurrentChat] = useState(1);
   const [currentChatId, setCurrentChatId] = useState(2);
@@ -22,17 +24,36 @@ function App() {
   const [feedback, setFeedback] = useState([]);
   // {positive: boolean, messageId: num, content: ""}
 
-  const toggleShowSideBar = (event) => {
-    setShowSidebar((prevState) => !prevState);
+  const toggleShowSidebar = (event) => {
+    setShowSidebar((prevState) => {
+      if (!prevState && showTabView) {
+        setShowTabView(false)
+      }
+      return !prevState
+    });
+
+    if (showSidebar && showTabView) {
+      setShowTabView(false);
+    }
+  }
+
+  const toggleShowTabView = (event) => {
+    setShowTabView((prevState) => {
+      if (!prevState && showSidebar) {
+        setShowSidebar(false)
+      }
+      return !prevState
+    });
   }
 
   return (
     <div id="app">
-      <Header />
       <ChatContext.Provider value={
         {
+          showTabView,
+          toggleShowTabView,
           showSidebar,
-          toggleShowSideBar,
+          toggleShowSidebar,
           currentChat,
           setCurrentChat,
           currentChatId,
@@ -48,6 +69,7 @@ function App() {
           setFeedback
         }
       }>
+        <Header />
         <AppView />
         {showModal ? <Modal setShowModal={setShowModal} modal={modal} /> : ""}
       </ChatContext.Provider>

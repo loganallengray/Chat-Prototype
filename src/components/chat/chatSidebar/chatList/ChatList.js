@@ -12,6 +12,9 @@ const ChatList = () => {
         switch (str) {
             case "chat":
                 cxt.setCurrentChat(chatId);
+                if (window.innerWidth < 680) {
+                    cxt.toggleShowSidebar()
+                }
                 break;
             case "edit":
                 const editChats = [...cxt.chats];

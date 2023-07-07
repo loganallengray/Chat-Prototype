@@ -1,14 +1,24 @@
+import { useContext } from 'react';
 import styles from './Header.module.css';
+import ChatContext from '../../context/chat-context';
 
 const Header = () => {
+    const cxt = useContext(ChatContext);
+
     return (
-        <ul id={styles.header}>
+        <ul id={styles.header} className='mobile-header'>
+            <li className='mobile-showHeaderItem'>
+                <div id={styles.openSidebar} className={styles.viewButton} onClick={cxt.toggleShowTabView}>{cxt.showTabView ? "Hide" : "View"} Tabs</div>
+            </li>
             <li id={styles.headerTitle}>Wiserdime</li>
-            <li className={styles.headerItem}>Accounts</li>
-            <li className={styles.headerItem}>Chat</li>
-            <li className={styles.headerItem}>Referrals</li>
-            <li className={styles.headerItem}>Feedback</li>
-            <li className={styles.headerItem}>Settings</li>
+            <li className={`${styles.headerItem} mobile-hideHeaderItem`}>Accounts</li>
+            <li className={`${styles.headerItem} mobile-hideHeaderItem`}>Chat</li>
+            <li className={`${styles.headerItem} mobile-hideHeaderItem`}>Referrals</li>
+            <li className={`${styles.headerItem} mobile-hideHeaderItem`}>Feedback</li>
+            <li className={`${styles.headerItem} mobile-hideHeaderItem`}>Settings</li>
+            <li className='mobile-showHeaderItem'>
+                <div id={styles.openSidebar} className={styles.viewButton} onClick={cxt.toggleShowSidebar}>{cxt.showSidebar ? "Hide" : "View"} Chats</div>
+            </li>
         </ul>
     );
 }
