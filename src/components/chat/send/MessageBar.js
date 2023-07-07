@@ -13,10 +13,27 @@ const MessageBar = () => {
     const sendMessage = (event) => {
         event.preventDefault();
 
-        const newChats = [...cxt.chats]
         const currentId = cxt.currentMessageId;
+        const newChats = [...cxt.chats]
+        let currentChat = cxt.currentChat;
 
-        newChats.find(chat => chat.id === cxt.currentChat).messages.push({
+        // Will create new chat if user is not currently on a chat
+        if (currentChat === -1) {
+            let currentChatId = cxt.currentChatId;
+
+            newChats.push({
+                id: currentChatId,
+                name: `Chat #${currentChatId}`,
+                messages: []
+            })
+
+            cxt.setCurrentChatId(currentId + 1);
+            currentChat = currentChatId;
+            cxt.setCurrentChat(currentChat);
+        }
+
+
+        newChats.find(chat => chat.id === currentChat).messages.push({
             id: currentId,
             content: message,
             userSent: true
@@ -43,7 +60,7 @@ const MessageBar = () => {
 
         const chosenResponse = responses[Math.floor(Math.random() * responses.length)];
 
-        newChats.find(chat => chat.id === cxt.currentChat).messages.push({
+        newChats.find(chat => chat.id === currentChat).messages.push({
             id: currentId + 1,
             content: chosenResponse,
             userSent: false
