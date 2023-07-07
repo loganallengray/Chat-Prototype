@@ -17,7 +17,11 @@ const ChatSidebar = () => {
         })
 
         cxt.setChats(newChats);
+        cxt.setCurrentChat(currentId);
         cxt.setCurrentChatId(currentId + 1);
+        if (window.innerWidth < 680) {
+            cxt.toggleShowSidebar()
+        }
     }
 
     if (cxt.showSidebar) {
