@@ -30,7 +30,7 @@ const AIMessage = ({ message }) => {
     }
 
     return (
-        <li key={message.id} className={styles.aiMessage}>
+        <li key={message.id} className={`${styles.aiMessage} mobile-message`}>
             <p className={styles.messageContent}>{message.content}</p>
             <div className={styles.feedbackWrapper}>
                 <div
