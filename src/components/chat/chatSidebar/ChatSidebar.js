@@ -22,7 +22,7 @@ const ChatSidebar = () => {
 
     if (cxt.showSidebar) {
         return (
-            <div id={styles.sidebar}>
+            <div id={styles.sidebar} className="mobile-sidebar">
                 <div id={styles.sidebarHead}>
                     <div id={styles.newChat} className={styles.headButton} onClick={newChatHandler}>New Chat</div>
                     <div id={styles.closeSidebar} className={styles.headButton} onClick={cxt.toggleShowSideBar}>Close</div>

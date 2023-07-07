@@ -1,4 +1,5 @@
-import './scrollbar.css';
+import './styles/mobile.css';
+import './styles/scrollbar.css';
 import AppView from "./components/AppView";
 import Header from "./components/header/Header";
 import ChatContext from "./context/chat-context";

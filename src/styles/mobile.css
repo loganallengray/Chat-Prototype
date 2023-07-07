@@ -1,0 +1,18 @@
+@media (max-width: 680px) {
+    .mobile-sidebar {
+        width: 100% !important;
+    }
+
+    .mobile-chatContainer {
+        display: none !important;
+    }
+
+    .mobile-header {
+        align-items: center !important;
+        justify-content: center !important;
+    }
+
+    .mobile-hideHeaderItem {
+        display: none;
+    }
+}
