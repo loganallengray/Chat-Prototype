@@ -9,6 +9,7 @@ import Modal from "./components/modal/Modal";
 
 function App() {
   const [showSidebar, setShowSidebar] = useState(true);
+  const [showTabView, setShowTabView] = useState(false);
   const [chats, setChats] = useState([{ id: 1, name: "Chat #1", messages: [] }]);
   const [currentChat, setCurrentChat] = useState(1);
   const [currentChatId, setCurrentChatId] = useState(2);
@@ -24,13 +25,33 @@ function App() {
   // {positive: boolean, messageId: num, content: ""}
 
   const toggleShowSidebar = (event) => {
-    setShowSidebar((prevState) => !prevState);
+    setShowSidebar((prevState) => {
+      if (!prevState && showTabView) {
+        setShowTabView(false)
+      }
+      return !prevState
+    });
+
+    if (showSidebar && showTabView) {
+      setShowTabView(false);
+    }
+  }
+
+  const toggleShowTabView = (event) => {
+    setShowTabView((prevState) => {
+      if (!prevState && showSidebar) {
+        setShowSidebar(false)
+      }
+      return !prevState
+    });
   }
 
   return (
     <div id="app">
       <ChatContext.Provider value={
         {
+          showTabView,
+          toggleShowTabView,
           showSidebar,
           toggleShowSidebar,
           currentChat,

@@ -8,7 +8,7 @@ const Header = () => {
     return (
         <ul id={styles.header} className='mobile-header'>
             <li className='mobile-showHeaderItem'>
-                <div id={styles.openSidebar} className={styles.viewButton} onClick={cxt.toggleShowSidebar}>View Tabs</div>
+                <div id={styles.openSidebar} className={styles.viewButton} onClick={cxt.toggleShowTabView}>{cxt.showTabView ? "Hide" : "View"} Tabs</div>
             </li>
             <li id={styles.headerTitle}>Wiserdime</li>
             <li className={`${styles.headerItem} mobile-hideHeaderItem`}>Accounts</li>
