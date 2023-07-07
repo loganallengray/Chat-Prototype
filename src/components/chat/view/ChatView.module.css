@@ -1,39 +1,36 @@
-#chat,
-#chatPlaceholder {
+#chat {
     background-color: #57639E;
     color: #fff;
     display: flex;
     flex-direction: column;
     align-items: center;
     height: 100%;
-    overflow-x: hidden;
-}
-
-#chat {
     list-style-type: none;
     margin-block-start: 0;
     margin-block-end: 0;
-    padding-inline-start: 0;
+    overflow-x: hidden;
     overflow-y: scroll;
+    padding-inline-start: 0;
+}
+
+#chatPlaceholder {
+    background-color: #57639E;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    padding: 1rem 15%;
+    text-align: center;
+}
+
+#placeholderInner {
+    display: flex;
 }
 
 #chatPlaceholder h1 {
     margin-block-start: 0;
     margin-block-end: 0;
     margin-bottom: 2rem;
-}
-
-#chatPlaceholder {
-    justify-content: center;
-    display: flex;
-    padding: 1rem 15%;
-}
-
-#placeholderInner {
-    align-items: flex-start;
-    display: flex;
-    justify-content: center;
-    text-align: center;
 }
 
 .placeholderGroup {

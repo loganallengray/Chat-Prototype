@@ -22,9 +22,7 @@ const ChatView = () => {
         )
     } else {
         return (
-            <ul id={styles.chat}>
-                <ChatPlaceholder />
-            </ul>
+            <ChatPlaceholder />
         )
     }
 }
