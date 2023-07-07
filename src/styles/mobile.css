@@ -27,4 +27,37 @@
     .mobile-message {
         padding: 1rem !important;
     }
+
+    .mobile-placeholder {
+        overflow: auto !important;
+        padding: 0 0 !important;
+        margin: 0 0 !important;
+    }
+
+    .mobile-placeholderInner {
+        flex-direction: column !important;
+        padding: 1rem;
+    }
+
+    .mobile-placeholder h1 {
+        padding-top: 1rem;
+        margin-bottom: 0 !important;
+    }
+
+    .mobile-placeholderInner {
+        flex-direction: column;
+    }
+
+    .mobile-placeholderGroup {
+        width: 100% !important;
+        margin: 0 !important;
+    }
+}
+
+@media (max-width: 1040px) {
+    .mobile-placeholder {
+        overflow: auto !important;
+        padding: 1rem 5% !important;
+        margin: 0 0 !important;
+    }
 }
