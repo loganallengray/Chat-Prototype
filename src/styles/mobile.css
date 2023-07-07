@@ -1,6 +1,16 @@
+.mobile-showHeaderItem {
+    display: none;
+}
+
 @media (max-width: 680px) {
     .mobile-sidebar {
         width: 100% !important;
+    }
+
+    .mobile-showHeaderItem {
+        display: flex;
+        justify-content: center;
+        width: 30%;
     }
 
     .mobile-hideChatContainer,

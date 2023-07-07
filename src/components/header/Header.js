@@ -7,9 +7,9 @@ const Header = () => {
 
     return (
         <ul id={styles.header} className='mobile-header'>
-            {/* <li className='mobile-showHeaderItem'>
-                <div id={styles.openSidebar} className={styles.viewChat} onClick={cxt.toggleShowSideBar}>View Chats</div>
-            </li> */}
+            <li className='mobile-showHeaderItem'>
+                <div id={styles.openSidebar} className={styles.viewButton} onClick={cxt.toggleShowSidebar}>View Tabs</div>
+            </li>
             <li id={styles.headerTitle}>Wiserdime</li>
             <li className={`${styles.headerItem} mobile-hideHeaderItem`}>Accounts</li>
             <li className={`${styles.headerItem} mobile-hideHeaderItem`}>Chat</li>
@@ -17,7 +17,7 @@ const Header = () => {
             <li className={`${styles.headerItem} mobile-hideHeaderItem`}>Feedback</li>
             <li className={`${styles.headerItem} mobile-hideHeaderItem`}>Settings</li>
             <li className='mobile-showHeaderItem'>
-                <div id={styles.openSidebar} className={styles.viewButton} onClick={cxt.toggleShowSideBar}>{cxt.showSidebar ? "Hide" : "View"} Chats</div>
+                <div id={styles.openSidebar} className={styles.viewButton} onClick={cxt.toggleShowSidebar}>{cxt.showSidebar ? "Hide" : "View"} Chats</div>
             </li>
         </ul>
     );

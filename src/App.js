@@ -23,7 +23,7 @@ function App() {
   const [feedback, setFeedback] = useState([]);
   // {positive: boolean, messageId: num, content: ""}
 
-  const toggleShowSideBar = (event) => {
+  const toggleShowSidebar = (event) => {
     setShowSidebar((prevState) => !prevState);
   }
 
@@ -32,7 +32,7 @@ function App() {
       <ChatContext.Provider value={
         {
           showSidebar,
-          toggleShowSideBar,
+          toggleShowSidebar,
           currentChat,
           setCurrentChat,
           currentChatId,

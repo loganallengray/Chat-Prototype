@@ -25,14 +25,14 @@ const ChatSidebar = () => {
             <div id={styles.sidebar} className="mobile-sidebar">
                 <div id={styles.sidebarHead}>
                     <div id={styles.newChat} className={styles.headButton} onClick={newChatHandler}>New Chat</div>
-                    <div id={styles.closeSidebar} className={`${styles.headButton} mobile-hideSidebarButton`} onClick={cxt.toggleShowSideBar}>Close</div>
+                    <div id={styles.closeSidebar} className={`${styles.headButton} mobile-hideSidebarButton`} onClick={cxt.toggleShowSidebar}>Close</div>
                 </div>
                 <ChatList />
             </div>
         )
     } else {
         return (
-            <div id={styles.openSidebar} className={`${styles.headButton} mobile-hideSidebarButton`} onClick={cxt.toggleShowSideBar}>Open</div>
+            <div id={styles.openSidebar} className={`${styles.headButton} mobile-hideSidebarButton`} onClick={cxt.toggleShowSidebar}>Open</div>
         )
     }
 }
