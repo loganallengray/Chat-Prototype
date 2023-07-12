@@ -13,6 +13,7 @@
 }
 
 #newChat {
+    text-align: left;
     width: 100%;
 }
 
@@ -23,22 +24,4 @@
 #openSidebar {
     margin: 1rem;
     position: absolute;
-}
-
-.headButton {
-    border: solid 1px #8697DD;
-    border-radius: 5px;
-    color: #fff;
-    padding: 5px;
-}
-
-.headButton:hover {
-    cursor: pointer;
-    background: rgba(255, 255, 255, 0.1);
-    border: solid 1px #fff;
-}
-
-.headButton:active {
-    background-color: #fff;
-    color: #494D73;
 }
