@@ -1,6 +1,7 @@
 import { useContext } from 'react';
 import styles from '../Modal.module.css';
 import ChatContext from '../../../context/chat-context';
+import DarkButton from '../../../UI/buttons/DarkButton';
 
 const DeleteChatModal = ({ setShowModal, modal }) => {
     const cxt = useContext(ChatContext);
@@ -19,7 +20,7 @@ const DeleteChatModal = ({ setShowModal, modal }) => {
 
     return (
         <div className={styles.errorContainer}>
-            <button className={styles.modalButton} onClick={deleteSubmitHandler}>Continue</button>
+            <DarkButton className={styles.modalButton} onClick={deleteSubmitHandler}>Continue</DarkButton>
         </div>
     )
 }

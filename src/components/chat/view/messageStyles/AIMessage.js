@@ -1,6 +1,7 @@
 import { useContext } from 'react';
 import styles from './MessageStyles.module.css';
 import ChatContext from '../../../../context/chat-context';
+import DarkButton from '../../../../UI/buttons/DarkButton';
 
 const AIMessage = ({ message }) => {
     const cxt = useContext(ChatContext);
@@ -33,16 +34,16 @@ const AIMessage = ({ message }) => {
         <li key={message.id} className={`${styles.aiMessage} mobile-message`}>
             <p className={styles.messageContent}>{message.content}</p>
             <div className={styles.feedbackWrapper}>
-                <div
+                <DarkButton
                     id={`positive--${message.id}`}
                     className={styles.feedback}
                     onClick={feedbackHandler}
-                >+</div>
-                <div
+                >+</DarkButton>
+                <DarkButton
                     id={`negative--${message.id}`}
                     className={styles.feedback}
                     onClick={feedbackHandler}
-                >-</div>
+                >-</DarkButton>
             </div>
         </li>
     )

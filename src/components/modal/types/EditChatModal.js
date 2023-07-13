@@ -1,6 +1,7 @@
 import { useContext, useEffect, useState } from 'react';
 import styles from '../Modal.module.css';
 import ChatContext from '../../../context/chat-context';
+import DarkButton from '../../../UI/buttons/DarkButton';
 
 const EditChatModal = ({ setShowModal, modal }) => {
     const [name, setName] = useState("");
@@ -36,7 +37,7 @@ const EditChatModal = ({ setShowModal, modal }) => {
                 type="text"
                 value={name}
             />
-            <button className={styles.modalButton} type="submit">Submit</button>
+            <DarkButton className={styles.modalButton} type="submit">Submit</DarkButton>
         </form>
     )
 }
