@@ -3,6 +3,7 @@ import React from "react";
 import FeedbackModal from './types/FeedbackModal';
 import EditChatModal from './types/EditChatModal';
 import DeleteChatModal from './types/DeleteChatModal';
+import DarkButton from '../../UI/buttons/DarkButton';
 
 const Modal = ({ setShowModal, modal }) => {
     const optionsCheck = () => {
@@ -34,7 +35,7 @@ const Modal = ({ setShowModal, modal }) => {
             <div className={styles.modal}>
                 <div className={styles.modalHeader}>
                     <h1>{modal.title}</h1>
-                    <div className={styles.modalButton} onClick={() => setShowModal(false)}>X</div>
+                    <DarkButton className={styles.modalButton} onClick={() => setShowModal(false)}>X</DarkButton>
                 </div>
                 <p>{modal.message}</p>
                 {optionsCheck()}

@@ -1,6 +1,7 @@
 import { useContext, useState } from 'react';
 import styles from '../Modal.module.css';
 import ChatContext from '../../../context/chat-context';
+import DarkButton from '../../../UI/buttons/DarkButton';
 
 const FeedbackModal = ({ setShowModal, modal }) => {
     const [message, setMessage] = useState("");
@@ -36,7 +37,7 @@ const FeedbackModal = ({ setShowModal, modal }) => {
                 type="text"
                 value={message}
             />
-            <button className={styles.modalButton} type="submit">Submit</button>
+            <DarkButton className={styles.modalButton} type="submit">Submit</DarkButton>
         </form>
     )
 }

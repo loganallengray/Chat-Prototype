@@ -52,7 +52,6 @@
     width: 100%;
 }
 
-.modalButton,
 .modalInput {
     background: #2F3555;
     border: solid 1px transparent;
@@ -63,18 +62,8 @@
     padding: 0.5rem;
 }
 
-.modalButton:hover {
-    cursor: pointer;
-}
-
-.modalButton:hover,
 .modalInput:hover {
     border: solid 1px #fff;
-}
-
-.modalButton:active {
-    color: #333;
-    background-color: #fff;
 }
 
 .errorContainer {

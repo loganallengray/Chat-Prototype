@@ -4,16 +4,35 @@
     border-radius: 5px;
     color: #fff;
     font-size: 1rem;
-    padding: 5px;
+    padding: 0.5rem;
 }
 
 .button-border:hover {
-    cursor: pointer;
     background-color: rgba(255, 255, 255, 0.1);
     border: solid 1px #fff;
+    cursor: pointer;
 }
 
 .button-border:active {
     background-color: #fff;
     color: #494D73;
+}
+
+.button-dark {
+    background-color: #2F3555;
+    border: 1px solid transparent;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 1rem;
+    padding: 0.5rem;
+}
+
+.button-dark:hover {
+    border: 1px solid #fff;
+    cursor: pointer;
+}
+
+.button-dark:active {
+    background-color: #fff;
+    color: #2F3555;
 }

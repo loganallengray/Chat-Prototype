@@ -1,6 +1,7 @@
 import React, { useContext, useState } from 'react';
 import styles from './MessageBar.module.css';
 import ChatContext from '../../../context/chat-context';
+import DarkButton from '../../../UI/buttons/DarkButton';
 
 const MessageBar = () => {
     const cxt = useContext(ChatContext);
@@ -76,7 +77,7 @@ const MessageBar = () => {
                 type="text"
                 value={message}
                 onChange={handleChange} />
-            <button>Send</button>
+            <DarkButton>Send</DarkButton>
         </form>
     )
 }
